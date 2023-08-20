@@ -6,8 +6,10 @@ node = Node.new(1)
 list = Linked_List.new(node)
 
 for i in 2 .. 5
-  list.append(i)
+  p list.append(i)
 end
+
+
 
 
 

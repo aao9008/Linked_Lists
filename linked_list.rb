@@ -52,6 +52,7 @@ class Linked_List
     return i
   end
 
+  # Returns node as given index
   def at(index)
     # Start at head of the list
     current_node = @head
@@ -67,5 +68,22 @@ class Linked_List
 
     # Return node at passed index
     current_node
-  end 
+  end
+
+  # Remove last element from the list
+  def pop
+    nil if size < 1
+
+    # Begin as the start of the list
+    current_node = @head
+
+    # Move through the list until you reach second to last node
+    current_node = current_node.node_pointer until current_node.node_pointer == @tail
+
+    # Clear the pointer of the second to last node
+    current_node.node_pointer = nil
+
+    # Make the second to last node the new tail of the list
+    @tail = current_node
+  end
 end 
