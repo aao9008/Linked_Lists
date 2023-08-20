@@ -9,7 +9,5 @@ for i in 2 .. 5
   list.append(i)
 end
 
-p list.head.node_pointer
 
-p list.size
 

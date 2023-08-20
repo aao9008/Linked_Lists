@@ -51,4 +51,21 @@ class Linked_List
     # Return the size of of the list
     return i
   end
+
+  def at(index)
+    # Start at head of the list
+    current_node = @head
+
+    # find node at passed index using linear search
+    index.times do
+      # If current_node pointer is nil, then index is invalid
+      if current_node.node_pointer.nil? then return 'Invalid Index' end 
+      
+      # Set current_node to next node in list
+      current_node = current_node.node_pointer
+    end
+
+    # Return node at passed index
+    current_node
+  end 
 end 
