@@ -8,7 +8,7 @@ class Linked_List
   attr_accessor :head, :tail
 
   # Adds new node containing passed value to the start of the list
-  def append(value)
+  def prepend(value)
     # Create new node.
     # Node data is the value passed
     # New node will point to the head of the list
