@@ -7,6 +7,14 @@ class Linked_List
   end
   attr_accessor :head, :tail
 
+  # Adds new node containing passed value to the start of the list
   def append(value)
-    
+    # Create new node.
+    # Node data is the value passed
+    # New node will point to the head of the list
+    new_node = new.Node(value, head)
+
+    # Change the head of the list to newly created node
+    head = new_node
+  end 
 end 
