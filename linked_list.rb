@@ -16,5 +16,39 @@ class Linked_List
 
     # Change the head of the list to newly created node
     head = new_node
-  end 
+  end
+
+  # Adds new node containing passed value to the end of the list.
+  def append(value)
+    # Create new node.
+    # Node data is the value passed
+    new_node = new.Node(value)
+
+    # Have the tail of the list point to new_node
+    tail.pointer(new_node)
+
+    # Make new_node the new tail of the list
+    tail = new_node
+  end
+
+  # Returns total number of nodes in the list
+  def size
+    # Set first node to the head of the list
+    node = head
+
+    # intialize a counter
+    i = 1
+
+    # Loop through until you reach the tail of the list.
+    until node.pointer == nil
+      # Increment the counter by 1.
+      i += 1
+
+      # Set node equal to the next node
+      node = node.pointer
+    end
+
+    # Return the size of of the list
+    return i
+  end
 end 
