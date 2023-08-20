@@ -6,4 +6,7 @@ class Linked_List
     @tail = node
   end
   attr_accessor :head, :tail
+
+  def append(value)
+    
 end 

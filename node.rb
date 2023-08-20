@@ -7,4 +7,9 @@ class Node
     @next_node = next_node
   end 
   attr_accessor :node_data, :next_node
+
+  # This method will chande the node data value to the passed parameter 
+  def value(data = nil)
+    node_data = data
+  end 
 end
