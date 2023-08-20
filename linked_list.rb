@@ -86,4 +86,22 @@ class Linked_List
     # Make the second to last node the new tail of the list
     @tail = current_node
   end
-end 
+
+  def contains?(value)
+    # Check if value is contianed in head or tail node for quickest execution (Possible O(1)).
+    if head.node_data == value || tail.node_data == value then return true end 
+    
+    # Set current node to the head of the list
+    current_node = @head
+
+    # Iterate through every node of the list until nil is returned (end of list).
+    until current_node == nil do 
+      # Return true if current node contains the data value being searched for.
+      if current_node.node_data == value then return true end
+      # Value has not been found, move onto the next node. 
+      current_node = current_node.node_pointer
+    end
+    # Value was not found in the list, return false
+    return false
+  end
+end
