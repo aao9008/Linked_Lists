@@ -104,4 +104,25 @@ class Linked_List
     # Value was not found in the list, return false
     return false
   end
+
+  def find(value)
+    # Set current node to the head of the list
+    current_node = @head
+    
+    # Initialize counter
+    i = 0
+
+    # Iterate through every node of the list until nil is returned (end of list).
+    until current_node == nil do 
+      # Return true if current node contains the data value being searched for.
+      if current_node.node_data == value then return i end
+
+      # Value has not been found, move onto the next node. 
+      current_node = current_node.node_pointer
+      # Increment counter 
+      i += 1
+    end
+    # Value was not found in the list, return false
+    return nil
+  end 
 end

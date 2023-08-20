@@ -9,7 +9,7 @@ for i in 2 .. 5
   list.append(i)
 end
 
-p list.contains?()
+p list.find(6)
 
 
 
