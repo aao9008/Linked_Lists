@@ -9,7 +9,8 @@ for i in 2 .. 5
   list.append(i)
 end
 
-p list.find(6)
+list.to_s
+
 
 
 

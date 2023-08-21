@@ -124,5 +124,17 @@ class Linked_List
     end
     # Value was not found in the list, return false
     return nil
-  end 
+  end
+
+  def to_s(node = @head, list = "")
+    current_node = node
+
+    if current_node == nil 
+      puts list << "nil"
+      return 
+    end 
+
+    list << "( #{current_node.node_data} ) -> "
+    to_s(node.node_pointer, list)
+  end
 end
