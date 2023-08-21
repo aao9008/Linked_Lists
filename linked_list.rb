@@ -126,15 +126,20 @@ class Linked_List
     return nil
   end
 
+  # Recursive function that will print out a string representation of the linked list object.
   def to_s(node = @head, list = "")
     current_node = node
 
+    # Base case: return once end of list is reached
     if current_node == nil 
       puts list << "nil"
       return 
     end 
 
+    # Concatinate string with next value in linked list
     list << "( #{current_node.node_data} ) -> "
+    
+    # Continue on to the next node in the list
     to_s(node.node_pointer, list)
   end
 end
